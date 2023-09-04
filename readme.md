@@ -6,6 +6,13 @@ docker-compose up --build -d # first time
 docker-compose up            # after building
 ```
 
+### JRuby
+
+```
+docker build -t jruby-threads .
+docker run --ulimit nofile=102400:102400 -it --rm --name run-those-jruby-threads jruby-threads
+```
+
 ### Java
 
 ```
