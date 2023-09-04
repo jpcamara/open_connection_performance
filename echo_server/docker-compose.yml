@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+      context: ./nginx/
+      args:
+        ENABLED_MODULES: echo
+    image: nginx-with-echo:v1
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
